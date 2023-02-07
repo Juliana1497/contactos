@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 
 const ListContacts = () => {
+  const[data, dataState] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/contact").then((res)=>{
+      return res.json();
+    }).then((resp)=>{
+      dataState(resp);
+    }).catch((error)=>{
+        console.log(error.message);
+    })
+  }, [])
+
   return (
     <div className='container'>
       <div className="card">
@@ -17,7 +29,16 @@ const ListContacts = () => {
               </tr>
             </thead>
             <tbody>
-
+              { data &&
+                data.map(user=>(
+                  <tr key={user.id}>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>{user.phone}</td>
+                    <td><a className='btn btn-danger'>Eliminar</a></td>
+                  </tr>
+                ))
+              }
             </tbody>
           </table>
         </div>
