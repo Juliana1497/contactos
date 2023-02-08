@@ -11,7 +11,7 @@ const rutas = () => {
   return (
     <Routes>
       <Route path="/" element={<ListContacts />} />
-      <Route path="/create" element={<CreateContact/>} />
+      {/* <Route path="/create" element={<CreateContact/>} /> */}
       <Route path="/details/:id" element={<DetailsContact/>} />
     </Routes>
   );
