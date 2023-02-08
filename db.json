@@ -2,15 +2,15 @@
   "contact": [
     {
       "id": 1,
-      "name": "Juliana Cristancho",
-      "email": "julianitacn@hotmail.com",
-      "phone": 2640357
+      "name": "json-server",
+      "email": "typicode",
+      "phone": "123456"
     },
     {
       "id": 2,
-      "name": "Jessica",
-      "email": "jess@gmail.com",
-      "phone": "123456789"
+      "name": "juli",
+      "email": "juli@juli",
+      "phone": "1234566"
     }
   ]
 }
