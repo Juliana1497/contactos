@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 
 const ListContacts = () => {
   const[data, dataState] = useState(null);
@@ -20,12 +21,15 @@ const ListContacts = () => {
           <h2>Lista de Contactos</h2>
         </div>
         <div className="card-body">
+          <div className='divbtn'>
+            <Link to="/create" className='btn btn-success'>Agregar contacto</Link>
+          </div>
           <table className="table table-bordered">
             <thead className="bg-dark text-white">
               <tr>
                 <td>Nombre</td>
                 <td>Correo</td>
-                <td>Número de telefóno</td>
+                <td>Número de teléfono</td>
               </tr>
             </thead>
             <tbody>
