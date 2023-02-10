@@ -1,18 +1,18 @@
 import React from "react";
-import ListContacts from "../components/listContacs/ListContacts";
 
-//importe de rutas
+//importe de funciones para manejar las rutas
 import { Route, Routes } from "react-router-dom";
-import CreateContact from "../components/createContact/CreateContact";
+
+//importe de componentes para definir las rutas
 import DetailsContact from "../components/detailsContact/DetailsContact";
+import Function from "../components/layouts/Function";
 
 //creación de rutas
 const rutas = () => {
   return (
     <Routes>
-      <Route path="/" element={<ListContacts />} />
-      {/* <Route path="/create" element={<CreateContact/>} /> */}
-      <Route path="/details/:id" element={<DetailsContact/>} />
+      <Route exact path="/" element={<Function />} />
+      <Route exact path="/details/:uid" element={<DetailsContact/>} />
     </Routes>
   );
 };
